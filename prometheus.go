@@ -294,7 +294,7 @@ func (p *PromOut) Run(or pipeline.OutputRunner, ph pipeline.PluginHelper) (err e
 				p.inFailure.Inc()
 			}
 
-			pack.Recycle()
+			pack.Recycle(nil)
 
 		case <-ticker:
 			// clearn up expired samples
